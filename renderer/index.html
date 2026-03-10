@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>GotRecon?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ── Title Bar ──────────────────────────────────────────────────────── -->
+  <div class="titlebar">
+    <span class="title-accent">GotRecon?</span>
+    <span class="title-sub">— Target Recon Dashboard</span>
+  </div>
+  <div class="separator"></div>
+
+  <!-- ── Top Bar (domain input + scan/stop) ─────────────────────────────── -->
+  <div class="topbar">
+    <input type="text" id="domain-input" placeholder="Enter domain (e.g. example.com)" spellcheck="false" autocomplete="off">
+    <button id="scan-btn" class="btn-scan" disabled>Scan</button>
+    <span id="history-count" class="history-count">History: 0</span>
+  </div>
+
+  <!-- ── Status Line ────────────────────────────────────────────────────── -->
+  <div id="status-line" class="status-line"></div>
+
+  <!-- ── Error Line ─────────────────────────────────────────────────────── -->
+  <div id="error-line" class="error-line"></div>
+
+  <!-- ── Main Layout: Sidebar + Content ─────────────────────────────────── -->
+  <div class="main-layout">
+    <!-- History Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-title">SCAN HISTORY</div>
+      <div class="separator"></div>
+      <div id="history-list" class="history-list">
+        <div class="text-muted">No scans yet.</div>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content" id="content">
+      <!-- Stats Bar -->
+      <div id="stats-bar" class="stats-bar hidden">
+        <div class="stat-box">
+          <span class="stat-value" id="stat-dns" style="color: #4dff66">0</span>
+          <span class="stat-label">DNS Records</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-value" id="stat-subs" style="color: #cc80ff">0</span>
+          <span class="stat-label">Subdomains</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-value" id="stat-certs" style="color: #ffc833">0</span>
+          <span class="stat-label">Certificates</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-value" id="stat-ips" style="color: #4de6ff">0</span>
+          <span class="stat-label">IPs Resolved</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-value" id="stat-typo" style="color: #ff6650">0</span>
+          <span class="stat-label">Typosquats</span>
+        </div>
+      </div>
+
+      <!-- Filter -->
+      <div id="filter-row" class="filter-row hidden">
+        <input type="text" id="filter-input" placeholder="Filter results..." spellcheck="false">
+      </div>
+
+      <!-- Tabs -->
+      <div id="tabs-container" class="tabs-container hidden">
+        <div class="tab-bar">
+          <button class="tab active" data-tab="dns">DNS Records</button>
+          <button class="tab" data-tab="subdomains">Subdomains</button>
+          <button class="tab" data-tab="certificates">Certificates</button>
+          <button class="tab" data-tab="typosquats">Typosquats</button>
+        </div>
+        <div class="tab-content" id="tab-content">
+          <!-- DNS Tab -->
+          <div class="tab-panel active" id="panel-dns"></div>
+          <!-- Subdomains Tab -->
+          <div class="tab-panel" id="panel-subdomains"></div>
+          <!-- Certificates Tab -->
+          <div class="tab-panel" id="panel-certificates"></div>
+          <!-- Typosquats Tab -->
+          <div class="tab-panel" id="panel-typosquats"></div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state">
+        <p>Enter a domain above and hit Scan to begin recon.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

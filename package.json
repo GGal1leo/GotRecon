@@ -1,0 +1,36 @@
+{
+  "name": "gotrecon",
+  "version": "1.0.0",
+  "description": "GotRecon? — Target Recon Dashboard (Electron)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
+    "start:x11": "electron . --ozone-platform=x11",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.gotrecon.app",
+    "productName": "GotRecon?",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "modules/**/*"
+    ],
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
