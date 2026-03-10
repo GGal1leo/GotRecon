@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14141a"/>
+      <stop offset="100%" stop-color="#1a1a21"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4dff66"/>
+      <stop offset="100%" stop-color="#2e9a6b"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#338061"/>
+      <stop offset="100%" stop-color="#265947"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="80" ry="80" fill="url(#bg)"/>
+
+  <!-- Outer border glow -->
+  <rect x="8" y="8" width="496" height="496" rx="72" ry="72" fill="none" stroke="#265947" stroke-width="3" opacity="0.6"/>
+
+  <!-- Crosshair target rings -->
+  <circle cx="230" cy="240" r="130" fill="none" stroke="url(#ring)" stroke-width="4" opacity="0.4"/>
+  <circle cx="230" cy="240" r="90" fill="none" stroke="url(#ring)" stroke-width="3" opacity="0.5"/>
+  <circle cx="230" cy="240" r="50" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.7"/>
+
+  <!-- Crosshair lines -->
+  <line x1="230" y1="95" x2="230" y2="185" stroke="#4dff66" stroke-width="2.5" opacity="0.5"/>
+  <line x1="230" y1="295" x2="230" y2="385" stroke="#4dff66" stroke-width="2.5" opacity="0.5"/>
+  <line x1="85" y1="240" x2="175" y2="240" stroke="#4dff66" stroke-width="2.5" opacity="0.5"/>
+  <line x1="285" y1="240" x2="375" y2="240" stroke="#4dff66" stroke-width="2.5" opacity="0.5"/>
+
+  <!-- Center dot -->
+  <circle cx="230" cy="240" r="6" fill="#4dff66"/>
+
+  <!-- Magnifying glass handle -->
+  <line x1="320" y1="330" x2="410" y2="420" stroke="url(#accent)" stroke-width="28" stroke-linecap="round"/>
+  <line x1="320" y1="330" x2="410" y2="420" stroke="#14141a" stroke-width="18" stroke-linecap="round"/>
+  <line x1="320" y1="330" x2="410" y2="420" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Magnifying glass lens ring -->
+  <circle cx="230" cy="240" r="130" fill="none" stroke="url(#accent)" stroke-width="14"/>
+  <circle cx="230" cy="240" r="130" fill="none" stroke="#14141a" stroke-width="8"/>
+  <circle cx="230" cy="240" r="130" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.8"/>
+
+  <!-- Glass lens subtle fill -->
+  <circle cx="230" cy="240" r="123" fill="#4dff66" opacity="0.03"/>
+
+  <!-- Scan line effect -->
+  <rect x="107" y="236" width="246" height="2" fill="#4dff66" opacity="0.3" rx="1"/>
+
+  <!-- Question mark -->
+  <text x="400" y="140" font-family="monospace" font-weight="bold" font-size="90" fill="#4dff66" opacity="0.85">?</text>
+
+  <!-- Small data dots scattered in lens -->
+  <circle cx="180" cy="190" r="3" fill="#4dff66" opacity="0.4"/>
+  <circle cx="260" cy="200" r="2.5" fill="#4dff66" opacity="0.35"/>
+  <circle cx="200" cy="280" r="2.5" fill="#4dff66" opacity="0.3"/>
+  <circle cx="270" cy="270" r="3" fill="#4dff66" opacity="0.45"/>
+  <circle cx="160" cy="250" r="2" fill="#4dff66" opacity="0.3"/>
+  <circle cx="250" cy="170" r="2" fill="#4dff66" opacity="0.35"/>
+  <circle cx="190" cy="310" r="2.5" fill="#4dff66" opacity="0.25"/>
+  <circle cx="280" cy="230" r="2" fill="#4dff66" opacity="0.3"/>
+</svg>
