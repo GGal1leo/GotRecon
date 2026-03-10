@@ -2,6 +2,8 @@
 
 A target reconnaissance dashboard built with Electron. Enter a domain and get a consolidated view of DNS records, certificate transparency logs, subdomains, and potential typosquat domains.
 
+![GotRecon Screenshot](assets/screenshot.png)
+
 ## Features
 
 - **DNS Resolution** — Queries all common record types (A, AAAA, MX, TXT, NS, CNAME, SOA, etc.)
