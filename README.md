@@ -44,6 +44,20 @@ npm run build
 
 Produces platform-specific packages (AppImage on Linux, DMG on macOS, NSIS installer on Windows).
 
+## Install (Arch Linux)
+
+```bash
+sudo bash install-arch.sh
+```
+
+Installs to `/opt/gotrecon`, creates a desktop entry, and adds a `gotrecon` launcher to your PATH that auto-detects Wayland/X11.
+
+To uninstall:
+
+```bash
+sudo bash /opt/gotrecon/uninstall.sh
+```
+
 ## Project Structure
 
 ```
