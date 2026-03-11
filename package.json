@@ -24,10 +24,12 @@
       "modules/**/*"
     ],
     "linux": {
-      "target": "AppImage"
+      "target": "AppImage",
+      "icon": "assets/gotrecon.png"
     },
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "icon": "assets/gotrecon.png"
     },
     "win": {
       "target": "nsis"

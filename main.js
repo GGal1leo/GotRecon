@@ -29,7 +29,7 @@ function createWindow() {
       nodeIntegration: false,
       zoomFactor: 1.0,
     },
-    icon: path.join(__dirname, 'assets', 'gotrecon.svg'),
+    icon: path.join(__dirname, 'assets', 'gotrecon.png'),
   });
 
   mainWindow.loadFile(path.join(__dirname, 'renderer', 'index.html'));
